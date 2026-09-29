@@ -1,8 +1,8 @@
+cat << 'EOF' > README.md
 # Production-Ready AWS EKS Infrastructure via Terraform
 
 This repository provisions a secure, highly-available, and production-ready **Amazon EKS (Elastic Kubernetes Service)** cluster along with its custom **VPC network** on AWS using modular Terraform.
-
-```mermaid
+Architecture Overview 
 graph TD
     subgraph AWS_Cloud ["AWS Cloud Region (us-east-1)"]
         subgraph VPC ["VPC (10.0.0.0/16)"]
@@ -24,7 +24,7 @@ graph TD
     NAT -->|Outbound Internet Access| Nodes
     ControlPlane -->|K8s API Management| Nodes
 
-Tech Stack & Key Features
+    🛠️ Tech Stack & Key Features
 Infrastructure as Code: Terraform (v5.x AWS Provider)
 
 Container Orchestration: Amazon EKS (v20.x EKS Module, K8s 1.30)
@@ -35,7 +35,7 @@ Networking: Dedicated VPC with isolated Public/Private Subnets and NAT Gateway
 
 Security: Strict IAM Roles, Private Worker Nodes, and Version Control Locking
 
-Usage & Deployment Guide
+🚀 Usage & Deployment Guide
 Prerequisites
 AWS CLI configured with valid administrator permissions.
 
@@ -45,7 +45,7 @@ kubectl for managing Kubernetes resources.
 
 1. Clone the Repository
 Bash
-git clone [https://github.com/YOUR-USERNAME/terraform-aws-eks-pipeline.git](https://github.com/YOUR-USERNAME/terraform-aws-eks-pipeline.git)
+git clone https://github.com/wahablabs/terraform-aws-eks-pipeline.git
 cd terraform-aws-eks-pipeline
 2. Initialize Infrastructure Code
 Bash
