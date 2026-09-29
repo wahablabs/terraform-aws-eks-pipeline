@@ -24,7 +24,9 @@ graph TD
     NAT -->|Outbound Internet Access| Nodes
     ControlPlane -->|K8s API Management| Nodes
 
-    🛠️ Tech Stack & Key Features
+    
+    
+🛠️ Tech Stack & Key Features
 Infrastructure as Code: Terraform (v5.x AWS Provider)
 
 Container Orchestration: Amazon EKS (v20.x EKS Module, K8s 1.30)
