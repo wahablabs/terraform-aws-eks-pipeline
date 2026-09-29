@@ -1,8 +1,6 @@
-cat << 'EOF' > README.md
 # Production-Ready AWS EKS Infrastructure via Terraform
 
 This repository provisions a secure, highly-available, and production-ready **Amazon EKS (Elastic Kubernetes Service)** cluster along with its custom **VPC network** on AWS using modular Terraform.
-Architecture Overview 
 graph TD
     subgraph AWS_Cloud ["AWS Cloud Region (us-east-1)"]
         subgraph VPC ["VPC (10.0.0.0/16)"]
@@ -23,9 +21,6 @@ graph TD
     IGW -->|Inbound / Outbound Routing| NAT
     NAT -->|Outbound Internet Access| Nodes
     ControlPlane -->|K8s API Management| Nodes
-
-    
-    
 🛠️ Tech Stack & Key Features
 Infrastructure as Code: Terraform (v5.x AWS Provider)
 
@@ -68,4 +63,4 @@ kubectl get nodes
 To avoid ongoing AWS charges, destroy the environment:
 
 Bash
-terraform destroy --auto-approve
+terraform destroy --auto-approve    
